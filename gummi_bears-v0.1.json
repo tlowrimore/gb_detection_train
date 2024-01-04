@@ -1,0 +1,600 @@
+{
+    "name": "v0.1",
+    "description": "Initial labeled dataset",
+    "created_at": "2024-01-04 00:08:18.046049+00:00",
+    "dataset": {
+        "name": "gummi_bears",
+        "description": "",
+        "category": "Other / mixed",
+        "created_at": "2024-01-03 15:55:17.688581+00:00",
+        "owner": "tlowrimore",
+        "task_type": "segmentation-bitmap",
+        "task_attributes": {
+            "format_version": "0.1",
+            "categories": [
+                {
+                    "name": "greenbear",
+                    "id": 1,
+                    "color": [
+                        126,
+                        211,
+                        33
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "yellowbear",
+                    "color": [
+                        236,
+                        176,
+                        31
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "redbear",
+                    "color": [
+                        208,
+                        2,
+                        27
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "orangebear",
+                    "color": [
+                        245,
+                        166,
+                        35
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "whitebear",
+                    "color": [
+                        255,
+                        255,
+                        255
+                    ]
+                }
+            ]
+        },
+        "tasks": {
+            "ground-truth": {
+                "description": "",
+                "task_type": "",
+                "attributes": {}
+            }
+        },
+        "labelsets": [
+            {
+                "name": "ground-truth",
+                "description": "",
+                "is_groundtruth": true,
+                "created_at": "2024-01-03 15:55:17.694535+00:00"
+            }
+        ],
+        "samples": [
+            {
+                "uuid": "a04af80b-d0f4-4000-a35d-c43d8288e8d3",
+                "name": "8.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/8.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 3,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 2,
+                                    "category_id": 4,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 3,
+                                    "category_id": 2,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 4,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 5,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/8.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "8413f907-9a01-4193-af77-1bae0792628b",
+                "name": "11.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/11.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "SKIPPED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [],
+                            "segmentation_bitmap": {
+                                "url": "./images/11.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "82a71024-ea64-471b-9161-de4b466eeca4",
+                "name": "3.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/3.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 4,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 2,
+                                    "category_id": 3,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 3,
+                                    "category_id": 2,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 4,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 5,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/3.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "8908949d-8181-4627-bf76-fcb4c39947be",
+                "name": "4.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/4.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 3,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 2,
+                                    "category_id": 4,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 3,
+                                    "category_id": 2,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 4,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 5,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/4.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "c99b36d1-f076-4c23-a68f-19470fe0b73b",
+                "name": "6.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/6.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 3,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 2,
+                                    "category_id": 4,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 3,
+                                    "category_id": 2,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 4,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 5,
+                                    "category_id": 1,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/6.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "2c0e7895-904a-401f-9375-87af66d98357",
+                "name": "7.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/7.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 3,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 2,
+                                    "category_id": 4,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 3,
+                                    "category_id": 2,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 4,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 5,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/7.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "4c7010fc-7e16-4b9f-ba9c-108da21a9395",
+                "name": "12.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/12.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 1,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/12.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "06c37a99-1ba5-4cbf-b52e-c2acc047409d",
+                "name": "10.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/10.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 3,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 2,
+                                    "category_id": 4,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 3,
+                                    "category_id": 2,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 4,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 5,
+                                    "category_id": 1,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/10.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "9eb31044-5818-48d8-8629-87f184482a17",
+                "name": "1.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/1.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 2,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 2,
+                                    "category_id": 3,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 3,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 4,
+                                    "category_id": 1,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 5,
+                                    "category_id": 1,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/1.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "0e8bbe9a-768e-4640-8f0c-5f0042047a56",
+                "name": "2.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/2.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 3,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 2,
+                                    "category_id": 3,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 3,
+                                    "category_id": 4,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 4,
+                                    "category_id": 1,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 5,
+                                    "category_id": 1,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 6,
+                                    "category_id": 2,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 7,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/2.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "be638e3d-9ec1-42d5-a1ad-a9bfca07066a",
+                "name": "5.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/5.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 3,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 2,
+                                    "category_id": 4,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 3,
+                                    "category_id": 2,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 4,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                },
+                                {
+                                    "id": 5,
+                                    "category_id": 5,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/5.png"
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                "uuid": "e766985c-35ed-42cb-873b-3ab19574c65a",
+                "name": "9.jpg",
+                "attributes": {
+                    "image": {
+                        "url": "./images/9.jpg"
+                    }
+                },
+                "metadata": {},
+                "labels": {
+                    "ground-truth": {
+                        "label_status": "REVIEWED",
+                        "attributes": {
+                            "format_version": "0.1",
+                            "annotations": [
+                                {
+                                    "id": 1,
+                                    "category_id": 1,
+                                    "attributes": {}
+                                }
+                            ],
+                            "segmentation_bitmap": {
+                                "url": "./images/9.png"
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
