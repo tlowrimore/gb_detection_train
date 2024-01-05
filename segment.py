@@ -21,19 +21,27 @@ class CustomDataset(Dataset):
         return len(self.data)
 
     def __getitem__(self, idx):
+        resize = transforms.Resize((256, 256))
+        # center_crop = transforms.CenterCrop(224)
         item = self.data[idx]
         img_path = os.path.join(self.img_dir, item['attributes']['image']['url'].split('/')[-1])
         img = Image.open(img_path).convert('RGB')
 
         # Get the labels
-        labels = item['labels']['ground-truth']['attributes']['annotations']
+        bitmap_url = item['labels']['ground-truth']['attributes']['segmentation_bitmap']['url']
 
         # Load the bitmap masks
-        bitmap_path = os.path.join(self.img_dir, labels['bitmap']['url'].split('/')[-1])
-        bitmap = Image.open(bitmap_path)
+        bitmap_path = os.path.join(self.img_dir, bitmap_url.split('/')[-1])
+        bitmap = Image.open(bitmap_path).convert('L')
+        bitmap = resize(bitmap)
+        # bitmap = center_crop(bitmap)
 
         # Convert the bitmap to a into a 2D matrix
         mask = np.array(bitmap)
+        mask = torch.from_numpy(mask).long()
+
+        img = resize(img)
+        # img = center_crop(img)
 
         if self.transform:
             img = self.transform(img)
@@ -47,7 +55,6 @@ class CustomDataset(Dataset):
 # Define a transform to normalize the data
 transform = transforms.Compose([
     transforms.Resize(256),  # Resize to 256x256 pixels
-    transforms.CenterCrop(224),  # Crop to 224x224 pixels around the center
     transforms.ToTensor(),  # Convert to PyTorch Tensor data type
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])  # Normalize with ImageNet mean and standard deviation
 ])
@@ -98,7 +105,7 @@ for epoch in range(num_epochs):
     for i, data in enumerate(train_loader, 0):
         # get the inputs; data is a list of [inputs, labels]
         inputs, labels = data[0].to(device), data[1].to(device)
-
+        
         # zero the parameter gradients
         optimizer.zero_grad()
 
