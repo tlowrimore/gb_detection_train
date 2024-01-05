@@ -115,4 +115,7 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
 
+# Save the model
+torch.save(model.state_dict(), 'model.pth')
+
 print('Finished Training')

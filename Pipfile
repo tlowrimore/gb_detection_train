@@ -8,6 +8,7 @@ torch = "*"
 torchvision = "*"
 segmentation-models-pytorch = "*"
 six = "*"
+matplotlib = "*"
 
 [dev-packages]
 
