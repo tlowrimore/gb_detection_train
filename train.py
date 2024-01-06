@@ -6,6 +6,10 @@ from torch.utils.data import Dataset, DataLoader
 from torchvision import transforms
 from PIL import Image
 
+JSON_PATH = 'gummi_bears-v0.1.json'
+IMG_DIR = './images'
+MODEL_FILE_NAME = 'model.pth'
+
 # ----------------------------------------------
 # 0. Define a custom dataset
 # ----------------------------------------------
@@ -22,7 +26,6 @@ class CustomDataset(Dataset):
 
     def __getitem__(self, idx):
         resize = transforms.Resize((256, 256))
-        # center_crop = transforms.CenterCrop(224)
         item = self.data[idx]
         img_path = os.path.join(self.img_dir, item['attributes']['image']['url'].split('/')[-1])
         img = Image.open(img_path).convert('RGB')
@@ -34,14 +37,12 @@ class CustomDataset(Dataset):
         bitmap_path = os.path.join(self.img_dir, bitmap_url.split('/')[-1])
         bitmap = Image.open(bitmap_path).convert('L')
         bitmap = resize(bitmap)
-        # bitmap = center_crop(bitmap)
 
         # Convert the bitmap to a into a 2D matrix
         mask = np.array(bitmap)
         mask = torch.from_numpy(mask).long()
 
         img = resize(img)
-        # img = center_crop(img)
 
         if self.transform:
             img = self.transform(img)
@@ -60,12 +61,10 @@ transform = transforms.Compose([
 ])
 
 # Create the dataset
-dataset = CustomDataset('gummi_bears-v0.1.json', './images', transform=transform)
+dataset = CustomDataset(JSON_PATH, IMG_DIR, transform=transform)
 
 # Create the data loader
 train_loader = DataLoader(dataset, batch_size=16, shuffle=True)
-
-print('Number of samples: ', len(dataset))
 
 # ----------------------------------------------
 # 2. Define a U-Net model
@@ -116,6 +115,6 @@ for epoch in range(num_epochs):
         optimizer.step()
 
 # Save the model
-torch.save(model.state_dict(), 'model.pth')
+torch.save(model.state_dict(), MODEL_FILE_NAME)
 
 print('Finished Training')
